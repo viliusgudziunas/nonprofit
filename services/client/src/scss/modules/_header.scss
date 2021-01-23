@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+
+  .navigation {
+    display: flex;
+  }
+}

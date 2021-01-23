@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import db from "./queries";
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

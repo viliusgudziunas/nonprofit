@@ -1,0 +1,32 @@
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+
+@import 'variables';
+@import 'base';
+
+/* MODULES - Re-usable site elements.
+========================================================================== */
+
+@import 'modules/_header.scss';
+@import 'modules/_tabs.scss';
+
+.app {
+  border-radius: 5px;
+
+  .content {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

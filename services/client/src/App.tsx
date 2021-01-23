@@ -1,25 +1,19 @@
 import React from 'react';
 import { Button, Col, Container, Form } from 'react-bootstrap';
-import './App.scss';
+import { Header } from './components/Header';
+import { TabModel } from './models/shared';
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
+  const tabs: TabModel[] = [
+    { name: 'Pagrindinis' },
+    { name: 'Apie mus' },
+    { name: 'Straipsniai' },
+    { name: 'Susisiek' },
+  ];
+
   return (
     <Container className='app'>
-      <div className='header'>
-        <div className='logo'>KITA || PERSPEKTYVA</div>
-        <br />
-        <div className='navigation'>
-          <div>Pagrindinis</div>
-          <div className='nav-gap'>|</div>
-          <div>Apie mus</div>
-          <div className='nav-gap'>|</div>
-          <div>Straipsniai</div>
-          <div className='nav-gap'>|</div>
-          <div>Susisiek</div>
-          <div className='nav-gap'>|</div>
-          <div className='test'>Paremk mūsų veiklą</div>
-        </div>
-      </div>
+      <Header tabs={tabs} />
       <hr />
       <div className='content'>
         <p>
@@ -75,5 +69,3 @@ const App: React.FC = () => {
     </Container>
   );
 };
-
-export default App;
