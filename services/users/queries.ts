@@ -8,16 +8,18 @@ const pool = new Pool.Pool({
   port: 5432,
 });
 
-const getUsers = (request, response) => {
+// @ts-ignore
+export const getUsers = (_request, response) => {
   pool.query("SELECT * FROM users ORDER BY id ASC", (error, result) => {
     if (error) {
       throw error;
     }
 
-    response.status(200).json(result.rows);
+    response.status(201).json(result.rows);
   });
 };
 
+// @ts-ignore
 const getUser = (request, response) => {
   const id = +request.params.id;
 
@@ -30,6 +32,7 @@ const getUser = (request, response) => {
   });
 };
 
+// @ts-ignore
 const createUser = (request, response) => {
   const { name, email } = request.body;
 
@@ -41,11 +44,13 @@ const createUser = (request, response) => {
         throw error;
       }
 
+      // @ts-ignore
       response.status(201).send(`User added with ID: ${result.insertId}`);
     }
   );
 };
 
+// @ts-ignore
 const updateUser = (request, response) => {
   const id = +request.params.id;
   const { name, email } = request.body;
@@ -53,7 +58,7 @@ const updateUser = (request, response) => {
   pool.query(
     "UPDATE users SET name = $1, email = $2 WHERE id = $3",
     [name, email, id],
-    (error, result) => {
+    (error, _result) => {
       if (error) {
         throw error;
       }
@@ -63,10 +68,11 @@ const updateUser = (request, response) => {
   );
 };
 
+// @ts-ignore
 const deleteUser = (request, response) => {
   const id = +request.params.id;
 
-  pool.query("DELETE FROM users WHERE id = $1", [id], (error, result) => {
+  pool.query("DELETE FROM users WHERE id = $1", [id], (error, _result) => {
     if (error) {
       throw error;
     }
