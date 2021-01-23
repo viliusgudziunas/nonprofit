@@ -1,6 +1,6 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const db = require("./queries");
+import express from "express";
+import bodyParser from "body-parser";
+import db from "./queries.js";
 
 const app = express();
 const port = 3000;

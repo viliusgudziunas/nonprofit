@@ -1,6 +1,6 @@
-const Pool = require("pg").Pool;
+import Pool from "pg";
 
-const pool = new Pool({
+const pool = new Pool.Pool({
   user: "dev",
   host: "localhost",
   database: "nonprofit_db",
@@ -75,4 +75,4 @@ const deleteUser = (request, response) => {
   });
 };
 
-module.exports = { getUsers, getUser, createUser, updateUser, deleteUser };
+export default { getUsers, getUser, createUser, updateUser, deleteUser };
