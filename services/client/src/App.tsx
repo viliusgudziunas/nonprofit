@@ -1,5 +1,6 @@
+import { Container } from '@material-ui/core';
 import React from 'react';
-import { Button, Col, Container, Form } from 'react-bootstrap';
+import { Form } from './components/Form';
 import { Header } from './components/Header';
 import { TabModel } from './models/shared';
 
@@ -19,7 +20,7 @@ export const App: React.FC = () => {
         <p>
           ‘Kita Perspektyva’- tai ne pelno siekianti organizacija. Mūsų misija
           yra skleisti tarpdisciplininę informaciją, potencialiai gerinančią
-          Lietuvos gyventojų psichologinį gerbuvį.{' '}
+          Lietuvos gyventojų psichologinį gerbuvį.
         </p>
         <p>
           Ateityje tikimės, jog mūsų organizacija ne tik taps vienu esminių
@@ -33,39 +34,13 @@ export const App: React.FC = () => {
           žinias apie psichiką, protą ir jų ryšį su kūnu.
         </p>
         <p>Jei norite užsiprenumeruoti mūsų naujienlaiškį spauskite čia.</p>
-        <div className='form'>
-          <Form>
-            <Form.Row className='align-items-center'>
-              <Col xs='auto'>
-                <Form.Label srOnly>Vardas</Form.Label>
-                <Form.Control
-                  type='email'
-                  placeholder='Vardas'
-                  className='mb-2'
-                />
-              </Col>
-              <Col xs='auto'>
-                <Form.Label srOnly>El. paštas</Form.Label>
-                <Form.Control
-                  type='email'
-                  placeholder='El. paštas'
-                  className='mb-2'
-                />
-              </Col>
-
-              <Col xs='auto'>
-                <Button className='mb-2' variant='outline-secondary'>
-                  Submit
-                </Button>
-              </Col>
-            </Form.Row>
-          </Form>
-        </div>
       </div>
       <hr />
+      <Form />
+      {/* <hr />
       <div className='footer'>
         <div className='info'>Kiti resursai</div>
-      </div>
+      </div> */}
     </Container>
   );
 };

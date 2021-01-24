@@ -16,7 +16,11 @@ export const Header: React.FC<HeaderProps> = ({ tabs }): JSX.Element => {
 
       <div className='navigation'>
         {tabs.map((tab, index) => (
-          <Tab tab={tab} skipSeparator={isLastIndexInArray(tabs, index)} />
+          <Tab
+            key={tab.name}
+            tab={tab}
+            skipSeparator={isLastIndexInArray(tabs, index)}
+          />
         ))}
       </div>
     </div>
