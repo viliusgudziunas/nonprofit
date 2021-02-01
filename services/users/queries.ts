@@ -1,4 +1,5 @@
 import Pool from "pg";
+import { GeneralUtils } from "./helpers";
 
 const pool = new Pool.Pool({
   user: "dev",
@@ -35,6 +36,14 @@ const getUser = (request, response) => {
 // @ts-ignore
 const createUser = (request, response) => {
   const { name, email } = request.body;
+
+  if (
+    GeneralUtils.isEmptyNullOrUndefined(name) ||
+    GeneralUtils.isEmptyNullOrUndefined(email)
+  ) {
+    response.status(400).json({ hello: null });
+    return;
+  }
 
   pool.query(
     "INSERT INTO users (name, email) VALUES ($1, $2)",

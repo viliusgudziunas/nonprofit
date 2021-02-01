@@ -37,10 +37,6 @@ export const App: React.FC = () => {
       </div>
       <hr />
       <Form />
-      {/* <hr />
-      <div className='footer'>
-        <div className='info'>Kiti resursai</div>
-      </div> */}
     </Container>
   );
 };
