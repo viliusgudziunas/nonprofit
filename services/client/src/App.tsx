@@ -12,7 +12,7 @@ export const App: React.FC = () => {
 
         <Switch>
           {appRoutes.map((route) => (
-            <Route exact path={route.path}>
+            <Route exact path={route.path} key={route.name}>
               {route.page}
             </Route>
           ))}

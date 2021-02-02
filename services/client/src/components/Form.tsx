@@ -11,15 +11,21 @@ interface FormData {
 export const Form: React.FC = () => {
   const initialFormValue: FormData = { name: '', email: '' };
   const [formData, setFormData] = useState(initialFormValue);
-  const [isSnackbarOpen, setSnackbarOpen] = useState(false);
+  const [successBarOpen, setSuccessBarOpen] = useState(false);
+  const [failureBarOpen, setFailureBarOpen] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    axios.post(`/api/users`, formData).then(() => {
-      setSnackbarOpen(true);
-      setFormData(initialFormValue);
-    });
+    axios
+      .post('/api/users/', formData)
+      .then(() => {
+        setSuccessBarOpen(true);
+        setFormData(initialFormValue);
+      })
+      .catch(() => {
+        setFailureBarOpen(true);
+      });
   };
 
   return (
@@ -58,11 +64,22 @@ export const Form: React.FC = () => {
 
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-        open={isSnackbarOpen}
+        open={successBarOpen}
         autoHideDuration={2000}
-        onClose={() => setSnackbarOpen(false)}
+        onClose={() => setSuccessBarOpen(false)}
       >
         <Alert variant='filled'>Prenumeracija baigta!</Alert>
+      </Snackbar>
+
+      <Snackbar
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        open={failureBarOpen}
+        autoHideDuration={6000}
+        onClose={() => setFailureBarOpen(false)}
+      >
+        <Alert variant='filled' color='error'>
+          Prenumeracija nesėkminga. Patikrinkite el. pašto adresą
+        </Alert>
       </Snackbar>
     </>
   );
