@@ -1,6 +1,16 @@
 .nav-tab {
   display: flex;
 
+  .nav-link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    text-decoration: underline;
+  }
+
   .nav-gap {
     margin: 0 10px;
   }

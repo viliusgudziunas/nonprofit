@@ -1,28 +1,31 @@
 import React from 'react';
-import { TabModel } from '../models/shared';
+import { RouteModel } from '../models/shared';
 import { isLastIndexInArray } from '../utils/utils';
 import { Tab } from './Tab';
 
 interface HeaderProps {
-  tabs: TabModel[];
+  tabs: RouteModel[];
 }
 
 export const Header: React.FC<HeaderProps> = ({ tabs }): JSX.Element => {
   return (
-    <div className='header'>
-      <div>KITA || PERSPEKTYVA</div>
+    <>
+      <div className='header'>
+        <div>KITA || PERSPEKTYVA</div>
 
-      <br />
+        <br />
 
-      <div className='navigation'>
-        {tabs.map((tab, index) => (
-          <Tab
-            key={tab.name}
-            tab={tab}
-            skipSeparator={isLastIndexInArray(tabs, index)}
-          />
-        ))}
+        <nav className='navigation'>
+          {tabs.map((tab, index) => (
+            <Tab
+              key={tab.name}
+              tab={tab}
+              skipSeparator={isLastIndexInArray(tabs, index)}
+            />
+          ))}
+        </nav>
       </div>
-    </div>
+      <hr />
+    </>
   );
 };
