@@ -1,4 +1,5 @@
 import React from 'react';
+import headerLogo from '../assets/logodar.png';
 import { RouteModel } from '../models/shared';
 import { isLastIndexInArray } from '../utils/utils';
 import { Tab } from './Tab';
@@ -11,10 +12,7 @@ export const Header: React.FC<HeaderProps> = ({ tabs }): JSX.Element => {
   return (
     <>
       <div className='header'>
-        <div>KITA || PERSPEKTYVA</div>
-
-        <br />
-
+        <img src={headerLogo} alt='headerLogo' className='logo' />
         <nav className='navigation'>
           {tabs.map((tab, index) => (
             <Tab

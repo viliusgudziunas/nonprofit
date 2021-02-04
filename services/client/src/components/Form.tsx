@@ -63,7 +63,7 @@ export const Form: React.FC = () => {
       </form>
 
       <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         open={successBarOpen}
         autoHideDuration={2000}
         onClose={() => setSuccessBarOpen(false)}
@@ -72,7 +72,7 @@ export const Form: React.FC = () => {
       </Snackbar>
 
       <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         open={failureBarOpen}
         autoHideDuration={6000}
         onClose={() => setFailureBarOpen(false)}

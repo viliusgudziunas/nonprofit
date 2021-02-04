@@ -7,12 +7,16 @@
 /* MODULES - Re-usable site elements.
 ========================================================================== */
 
+@import 'modules/_logo.scss';
 @import 'modules/_button.scss';
 
 @import 'modules/_header.scss';
 @import 'modules/_tabs.scss';
 
 @import 'modules/_form.scss';
+
+/* OTHER
+========================================================================== */
 
 .content {
   padding: 20px;
