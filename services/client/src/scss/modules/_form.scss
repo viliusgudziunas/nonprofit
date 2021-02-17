@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .text-field {
+    width: '25ch';
+    margin: 5px;
+  }
+}
