@@ -1,0 +1,25 @@
+.app {
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 12px 0 15px -4px rgba(127, 129, 133, 0.8),
+    -12px 0 15px -4px rgba(127, 129, 133, 0.8);
+}
+
+.page-content {
+  padding: 20px;
+}
+
+.values-list {
+  margin: 8px;
+  display: flex;
+  justify-content: space-around;
+
+  .value {
+    margin: 1.5px;
+  }
+
+  .value:hover {
+    color: #3f51b5;
+    font-size: 25px;
+  }
+}

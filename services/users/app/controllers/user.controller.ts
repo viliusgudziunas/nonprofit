@@ -5,8 +5,6 @@ const User = db.users;
 
 const create = (req: Request, res: Response) => {
   const { name, email } = req.body;
-  console.log("name:", name);
-  console.log("email:", email);
 
   if (!name || !email) {
     res
@@ -25,11 +23,5 @@ const create = (req: Request, res: Response) => {
       })
     );
 };
-
-// const findAll = (req: Request, res: Response) => {
-//   User.findAll().then((data: any) => {
-//     console.log("data:", data);
-//   });
-// };
 
 export default { create };

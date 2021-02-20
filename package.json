@@ -1,0 +1,24 @@
+{
+  "name": "jaudabar",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd services/client && yarn start",
+    "server": "cd services/users && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "client:build": "cd services/client && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viliusgudziunas/nonprofit.git"
+  },
+  "author": "Vilius Gudziunas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viliusgudziunas/nonprofit/issues"
+  },
+  "homepage": "https://github.com/viliusgudziunas/nonprofit#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
