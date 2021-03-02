@@ -24,4 +24,8 @@ const create = (req: Request, res: Response) => {
     );
 };
 
-export default { create };
+const test = (req: Request, res: Response) => {
+  res.send({ great: "success" });
+};
+
+export default { create, test };

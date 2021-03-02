@@ -1,8 +1,11 @@
+import { environment } from "../environment";
+
+const { host, user, password, name } = environment.db;
 export const dbConfig = {
-  HOST: "localhost",
-  USER: "dev",
-  PASSWORD: "password",
-  DB: "nonprofit_dev",
+  HOST: host,
+  USER: user,
+  PASSWORD: password,
+  DB: name,
   dialect: "postgres" as "postgres",
   pool: { max: 5, min: 0, acquire: 30000, idle: 10000 },
 };

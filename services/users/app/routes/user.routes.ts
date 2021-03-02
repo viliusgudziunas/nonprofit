@@ -5,5 +5,6 @@ const router = Router();
 
 router.post("/", users.create);
 // router.get("/", users.findAll);
+router.get("/", users.test);
 
 export const usersRouter = (app: any) => app.use("/api/users", router);
