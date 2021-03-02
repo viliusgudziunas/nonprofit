@@ -25,7 +25,7 @@ const create = (req: Request, res: Response) => {
 };
 
 const test = (req: Request, res: Response) => {
-  res.send({ great: "success" });
+  res.send({ amazing: "success" });
 };
 
 export default { create, test };

@@ -15,17 +15,13 @@ if (environment.env === "development") {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// db.sequelize.sync();
+db.sequelize.sync();
 // May need this while in development
 // db.sequelize.sync({ force: true }).then(() => {
 //   console.log("Drop and re-sync db.");
 // });
 
-// usersRouter(app);
-
-app.get("/", (req, res) => {
-  res.send({ great: "success" });
-});
+usersRouter(app);
 
 const port = environment.port;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
