@@ -1,8 +1,9 @@
 import { environment } from "../environment";
 
-const { host, user, password, name } = environment.db;
+const { host, port, user, password, name } = environment.db;
 export const dbConfig = {
   HOST: host,
+  PORT: +port,
   USER: user,
   PASSWORD: password,
   DB: name,
