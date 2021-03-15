@@ -1,5 +1,13 @@
 import React from 'react';
 
 export const SupportUsPage: React.FC = () => {
-  return <div>Hello, this is Support Us Page</div>;
+  return (
+    <>
+      <div>
+        Kadangi esame ne pelno siekianti organizacija, prašome Jūsų prisidėti
+        prie mūsų veiklos finansiškai, jog galėtume toliau sėkmingai vykdyti
+        savo misiją.
+      </div>
+    </>
+  );
 };

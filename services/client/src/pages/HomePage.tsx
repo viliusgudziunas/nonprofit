@@ -1,10 +1,12 @@
 import React from 'react';
+import homeLogo from '../assets/home.jpg';
 import { Form } from '../components/Form';
 
 export const HomePage: React.FC = () => {
   return (
     <>
       <div className='page-content'>
+        <img src={homeLogo} alt='homeLogo' className='home-logo' />
         <p>
           „Jau Dabar” - tai ne pelno siekianti organizacija. Mūsų misija yra
           skleisti informaciją, kuri ne tik įkvėptų, bet ir padėtų Lietuvos

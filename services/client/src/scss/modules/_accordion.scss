@@ -1,0 +1,20 @@
+.accordion-summary {
+  font-size: 18px;
+  border-bottom: 0.5px solid rgb(194, 192, 192) !important;
+}
+
+.accordion-details {
+  flex-direction: column;
+
+  .accordion-paragraph {
+    margin: 8px 0;
+  }
+
+  .accordion-details-strong {
+    font-size: 18px;
+  }
+
+  .authors-name {
+    text-align: right;
+  }
+}
